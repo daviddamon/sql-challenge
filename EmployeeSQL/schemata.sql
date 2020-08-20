@@ -11,7 +11,7 @@ CREATE TABLE departments (
     CONSTRAINT pk_departments PRIMARY KEY (dept_no)
 );
 
-COPY departments (dept_no, dept_name)
+COPY departments--(dept_no, dept_name)
 FROM 'C:\Users\dave\Data_Bootcamp\Homework\sql-challenge\EmployeeSQL\data\departments.csv'
 DELIMITER ',' CSV HEADER;
 
@@ -95,6 +95,4 @@ REFERENCES titles (title_id);
 
 ALTER TABLE salaries ADD CONSTRAINT fk_salaries_emp_no FOREIGN KEY(emp_no)
 REFERENCES employees (emp_no);
-
-
 
